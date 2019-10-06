@@ -1,5 +1,5 @@
 <?php
-// Conectando y seleccionado la base de datos  
+// Conectando y seleccionando la base de datos  
 $dbconn = pg_connect("host=localhost dbname=firstdb user=root password=root*18")
     or die('No se ha podido conectar con la base de datos' . pg_last_error());
 
