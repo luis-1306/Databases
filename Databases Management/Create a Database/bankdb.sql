@@ -100,3 +100,17 @@ CREATE TABLE `atm_machine` (
   `pass_card` int,
   `breakdown_atm` set('lack_of_paper', 'broken_screen', 'general_failure')
 );
+
+CREATE TABLE `workers` (
+  `workers_id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `dni` char(9) UNIQUE,
+  `full_name` varchar(255),
+  `gender` varchar(255),
+  `branch_id` varchar(255),
+  `employee_code` int UNIQUE,
+  `employee_position` varchar(255),
+  `employee_since` date,
+  `employee_schedule_start` time,
+  `employee_schedule_end` time,
+  `salary` numeric(7,2)
+);
