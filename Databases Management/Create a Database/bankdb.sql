@@ -114,3 +114,25 @@ CREATE TABLE `workers` (
   `employee_schedule_end` time,
   `salary` numeric(7,2)
 );
+
+ALTER TABLE `customers` ADD FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`);
+
+ALTER TABLE `branch` ADD FOREIGN KEY (`bank_id`) REFERENCES `bank` (`bank_id`);
+
+ALTER TABLE `credit_card` ADD FOREIGN KEY (`bank_id`) REFERENCES `bank` (`bank_id`);
+
+ALTER TABLE `loan` ADD FOREIGN KEY (`creditor`) REFERENCES `bank` (`bank_id`);
+
+ALTER TABLE `account` ADD FOREIGN KEY (`transactions_id`) REFERENCES `transactions` (`transactions_id`);
+
+ALTER TABLE `account` ADD FOREIGN KEY (`loan_id`) REFERENCES `loan` (`loan_id`);
+
+ALTER TABLE `customers` ADD FOREIGN KEY (`account_id`) REFERENCES `account` (`account_id`);
+
+ALTER TABLE `account` ADD FOREIGN KEY (`card_id`) REFERENCES `credit_card` (`card_id`);
+
+ALTER TABLE `branch` ADD FOREIGN KEY (`atm_id`) REFERENCES `atm_machine` (`atm_id`);
+
+ALTER TABLE `branch` ADD FOREIGN KEY (`workers_id`) REFERENCES `workers` (`workers_id`);
+
+CREATE INDEX `IDX_payment` ON `transactions` (`quantity`, `transmitter`, `destinatary`);
