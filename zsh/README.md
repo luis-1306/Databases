@@ -35,3 +35,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~~~
+
+Más plugins en: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
