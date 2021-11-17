@@ -13,3 +13,8 @@ cat << EOF > /opt/git/.gitignore_global
 EOF
 
 chown ${USER}: /opt/git/ /opt/vagrant/ -R
+
+# Kubernetes
+wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+tar xf kubeval-linux-amd64.tar.gz
+sudo cp kubeval /usr/local/bin
