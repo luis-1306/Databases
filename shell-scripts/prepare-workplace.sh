@@ -4,6 +4,7 @@ sudo apt update && sudo apt install nmap net-tools yakuake colordiff docker.io g
 mkdir ~/Bucket ~/Docker/ ~/Scripts ~/TestArea
 sudo mkdir -p /opt/git/luis13cst /opt/tools /opt/vagrant/centos7
 
+# Git config
 cat << EOF > /opt/git/.gitignore_global
 # IDEs
 .idea/
@@ -13,6 +14,9 @@ cat << EOF > /opt/git/.gitignore_global
 EOF
 
 chown ${USER}: /opt/git/ /opt/vagrant/ -R
+git config --global core.excludesfile /opt/git/.gitignore_global
+
+
 
 # Kubernetes
 wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
