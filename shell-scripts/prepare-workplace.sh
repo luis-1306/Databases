@@ -3,7 +3,7 @@
 sudo apt update && sudo apt install nmap net-tools yakuake colordiff docker.io mysql-client filezilla python3 terraform terminator gparted git rkhunter virtualbox vagrant
 sudo snap install go
 mkdir ~/Bucket ~/Docker/ ~/Scripts ~/TestArea
-sudo mkdir -p /opt/git/luis13cst /opt/tools /opt/vagrant/centos7
+sudo mkdir -p /opt/git/luis13cst /opt/tools /opt/vagrant/centos7 /backup/_special
 sudo chown ${USER}: /opt/git
 
 # Git config
@@ -15,7 +15,7 @@ cat << EOF > /opt/git/.gitignore_global
 .history/
 EOF
 
-sudo chown ${USER}: /opt/git/ /opt/vagrant/ -R
+sudo chown ${USER}: /opt/git/ /opt/vagrant/ /backup/ -R
 git config --global core.excludesfile /opt/git/.gitignore_global
 
 
