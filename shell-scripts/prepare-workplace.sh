@@ -3,7 +3,7 @@
 sudo apt update && sudo apt install -y nmap net-tools yakuake colordiff docker.io mysql-client filezilla python3 gnupg software-properties-common curl terminator gparted git rkhunter virtualbox vagrant
 sudo snap install go --classic
 mkdir ~/Bucket ~/Docker/ ~/Scripts ~/TestArea
-sudo mkdir -p /opt/git/luis13cst /opt/tools /opt/vagrant/centos7 /backup/_special
+sudo mkdir -p /opt/git/luis13byte /opt/tools /opt/vagrant/centos7 /backup/_special
 sudo chown ${USER}: /opt/git
 
 # Git config
